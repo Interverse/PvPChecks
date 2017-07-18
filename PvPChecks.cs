@@ -83,7 +83,7 @@ namespace PvPChecks {
             }
 
             //Checks whether a player has a banned buff
-            if(!player.HasPermission("pvpchecks.usebannedweps")) {
+            if(!player.HasPermission("pvpchecks.usebannedbuffs")) {
                 foreach(int buff in buffbans) {
                     foreach (int playerbuff in player.TPlayer.buffType) {
                         if (playerbuff == buff) {
