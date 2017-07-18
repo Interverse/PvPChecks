@@ -1,0 +1,11 @@
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\PvPChecks.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\PvPChecks.pdb
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\Newtonsoft.Json.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\OTAPI.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\TerrariaServer.exe
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\TShockAPI.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\MySql.Data.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\bin\Release\Mono.Data.Sqlite.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\obj\Release\PvPChecks.csprojResolveAssemblyReference.cache
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\obj\Release\PvPChecks.dll
+C:\Users\jiong\Desktop\Programs\TShock Plugins\PvPChecks\obj\Release\PvPChecks.pdb
