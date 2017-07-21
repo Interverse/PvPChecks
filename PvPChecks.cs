@@ -178,20 +178,36 @@ namespace PvPChecks {
         }
 
         private void BanWeapon(CommandArgs args) {
-            if (args.Parameters.Count == 2) {
+            if (args.Parameters.Count >= 2 && (args.Parameters[0] == "add" || args.Parameters[0] == "del")) {
+                string input =  string.Join(" ", args.Parameters.Skip(1).ToArray());
+                string weaponname;
+                
+                List<string> weaponlist = new List<string>();
+                List<Item> foundweapons = TShock.Utils.GetItemByName(input);
+
+                foreach (Item item in foundweapons) {
+                    weaponlist.Add(item.Name);
+                }
+
+                if (weaponlist.Count < 1) {
+                    args.Player.SendErrorMessage("No items by that name were found.");
+                    return;
+                } else if (weaponlist.Count > 1) {
+                    TShock.Utils.SendMultipleMatchError(args.Player, weaponlist);
+                    return;
+                } else {
+                    weaponname = weaponlist[0];
+                }
+
                 switch (args.Parameters[0]) {
                     case "add":
-                        weaponbans.Add(args.Parameters[1].ToString());
-                        args.Player.SendSuccessMessage("Banned " + args.Parameters[1].ToString() + " in pvp.");
+                        weaponbans.Add(weaponname);
+                        args.Player.SendSuccessMessage("Banned " + weaponname + " in pvp.");
                         break;
 
                     case "del":
-                        weaponbans.Remove(args.Parameters[1].ToString());
-                        args.Player.SendSuccessMessage("Unbanned " + args.Parameters[1].ToString() + " in pvp.");
-                        break;
-
-                    default:
-                        args.Player.SendErrorMessage("Incorrect syntax. /banweapon <add/del> <Weapon Name>");
+                        weaponbans.Remove(weaponname);
+                        args.Player.SendSuccessMessage("Unbanned " + weaponname + " in pvp.");
                         break;
                 }
             } else {
