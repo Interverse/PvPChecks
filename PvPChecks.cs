@@ -64,6 +64,7 @@ namespace PvPChecks {
 
         public void OnPlayerUpdate(object sender, GetDataHandlers.PlayerUpdateEventArgs args) {
             TSPlayer player = TShock.Players[args.PlayerId];
+            if (player == null) return;
 
             //If the player isn't in pvp or using an item, skip pvp checking
             if (!player.TPlayer.hostile || (args.Control & 32) == 0) return;
